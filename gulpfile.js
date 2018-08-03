@@ -10,10 +10,10 @@ gulp.task('del', function() {
 gulp.task('fileinclude', ['del'], function() {
     return gulp.src('src/*.html')
         .pipe(fileinclude({
-            prefix: '@@',
-            basepath: 'src/include',
-            indent: true,
-            context: {
+            prefix: '@@', // 识别什么前缀
+            basepath: 'src/include', // 指定包含块的目录
+            indent: true, // 是否保留缩进
+            context: { // 携带的数据
                 name: 'test',
                 footer: true
             }
